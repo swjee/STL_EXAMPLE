@@ -1,4 +1,4 @@
-PROGS	= test
+PROGS	= test functest arithm
 CC	= g++
 #CFLAGS 	= -g  -save-temps
 CFLAGS 	= -g  
@@ -17,6 +17,11 @@ test:	test.o
 
 functest: 	functest.o
 			${CC} ${CFLAGS} -o $@ functest.o ${LIBS}
+
+
+arithm: 	arithm.o
+			${CC} ${CFLAGS} -o $@ arithm.o ${LIBS}
+
 
 clean:
 	rm -rf *.o *.ii *.s test
